@@ -194,9 +194,10 @@ code {
                                             <button>
                                                 Delete
                                             </button>
-                                            <a href="{{ route('advertise.edit', ['contact' => $contact]) }}"
-                                               class="btn">
-                                                Edit
+
+                                            <a href="{{ route('advertise.edit', ['contact' => $contact]) }}" data-lity
+                                               style="padding: 10px;width: 100%">
+                                                <button>Edit</button>
                                             </a>
                                         </form>
                                     </div>

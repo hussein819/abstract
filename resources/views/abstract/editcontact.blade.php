@@ -1,19 +1,21 @@
-@extends('layouts.control')
+@extends('layouts.layout_abstract')
 @section('title','Edit Advertise')
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Edit Advertise') }}</div>
+    <section id="content-wrap" class="blog-single">
+        <div class="comments-wrap">
+            <div id="comments" class="row">
 
-                    <div class="card-body">
-                        <form action="{{ route('advertise.update', ['contact' => $contact]) }}" method="POST"
-                              enctype="multipart/form-data">
+
+                <div class="respond">
+                    <h3>update comment</h3>
+
+                    <form name="contactForm" id="contactForm" method="post"
+                          action="{{ route('advertise.update', ['contact' => $contact]) }}">
+                        <fieldset>
                             @method('PATCH')
                             <div class="form-group">
                                 <label for="website_id">Website</label>
-                                <select name="website_id" class="form-control">
+                                <select name="website_id" class="full-width">
                                     @foreach ($websites as $website)
                                         <option
                                             value="{{ $website->id }}" {{ $website->id == $advertise->website_id ? 'selected' : '' }}>{{ $website->name }}</option>
@@ -21,10 +23,10 @@
                                 </select>
                             </div>
 
-                            <div class="form-group">
+                            <div class=" message form-field">
                                 <label for="comment">Comment</label>
 
-                                <textarea class="form-control" id="comment" rows="3"
+                                <textarea class="full-width" id="comment" rows="3"
                                           name="comment">{{ old('comment') ?? $contact->comment }}</textarea>
                                 @error('comment')
                                 <small class="text-danger">{{ $message }}</small>
@@ -32,16 +34,16 @@
                             </div>
                             @csrf
                             <button type="submit" class="btn btn-outline-success">
-                                <svg width="60px" height="30px" viewBox="0 0 16 16" class="bi bi-check-circle-fill"
-                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                </svg>
+                                Update
                             </button>
-                        </form>
-                    </div>
-                </div>
+                        </fieldset>
+                    </form> <!-- Form End -->
+
+                </div> <!-- Respond End -->
+
             </div>
         </div>
-    </div>
+
+
+
 @endsection

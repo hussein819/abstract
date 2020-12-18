@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9a1b7c7-14fa-415c-b4ad-e0308b463781" name="Default Changelist" comment="" />
+    <list default="true" id="f9a1b7c7-14fa-415c-b4ad-e0308b463781" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/abstract/editcontact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/editcontact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/abstract/single_audio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/single_audio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/abstract/single_gallery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/single_gallery.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/abstract/single_standard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/single_standard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/abstract/single_video.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/single_video.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +17,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -124,6 +134,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lgNDT3ke8wWOYDmeUmb72wiP2Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -169,6 +180,11 @@
       <workItem from="1608195709768" duration="6000" />
       <workItem from="1608203756493" duration="2743000" />
       <workItem from="1608206537100" duration="15000" />
+      <workItem from="1608280232616" duration="72000" />
+      <workItem from="1608281433903" duration="1651000" />
+      <workItem from="1608283367998" duration="101000" />
+      <workItem from="1608284859900" duration="335000" />
+      <workItem from="1608285282163" duration="1598000" />
     </task>
     <servers />
   </component>
