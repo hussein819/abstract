@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f9a1b7c7-14fa-415c-b4ad-e0308b463781" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/abstract/editcontact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/editcontact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/abstract/single_audio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/single_audio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdvertisesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdvertisesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/abstract/single_gallery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/single_gallery.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/abstract/single_standard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/single_standard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/abstract/single_video.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/abstract/single_video.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,6 +183,9 @@
       <workItem from="1608283367998" duration="101000" />
       <workItem from="1608284859900" duration="335000" />
       <workItem from="1608285282163" duration="1598000" />
+      <workItem from="1608311048956" duration="149000" />
+      <workItem from="1608377128397" duration="459000" />
+      <workItem from="1608377960944" duration="1452000" />
     </task>
     <servers />
   </component>

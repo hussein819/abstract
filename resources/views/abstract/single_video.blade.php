@@ -205,7 +205,7 @@ code {
                                             placeholder="Website" value="" style="width:100%">
                                         @foreach ($website as $web)
                                             <option
-                                                value="{{ $web->id }}" {{ $web->id == $contact->website_id ? 'selected' : '' }}>{{ $web->name }}</option>
+                                                value="{{ $web->id }}" {{ $web->id == $web->website_id ? 'selected' : '' }}>{{ $web->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

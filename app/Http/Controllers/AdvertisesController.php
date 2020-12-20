@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\User;
 use App\Models\Website;
 use Illuminate\Http\Request;
+use function GuzzleHttp\default_user_agent;
 
 class AdvertisesController extends Controller
 {
@@ -124,7 +125,7 @@ class AdvertisesController extends Controller
 
     public function audio(Advertise $advertise, Request $request)
     {
-        $contacts = Contact::where('website_id', $request->query('website_id', 3))->get();
+        $contacts = Contact::where('website_id', $request->query('website_id', 1))->get()->sortByDesc('id');
         // $contact=\DB::table('contacts')->get();
         $count = $contacts->count();
         $website = Website::all();
@@ -134,7 +135,7 @@ class AdvertisesController extends Controller
 
     public function video(Advertise $advertise, Request $request)
     {
-        $contacts = Contact::where('website_id', $request->query('website_id', 2))->get();
+        $contacts = Contact::where('website_id', $request->query('website_id', 3))->get()->sortByDesc('id');
         // $contact=\DB::table('contacts')->get();
         $count = $contacts->count();
         $website = Website::all();
@@ -152,7 +153,7 @@ class AdvertisesController extends Controller
 
     public function gallery(Advertise $advertise, User $user, Request $request)
     {
-        $contacts = Contact::where('website_id', $request->query('website_id', 1))->get();
+        $contacts = Contact::where('website_id', $request->query('website_id', 2))->get()->sortByDesc('id');
         // $contact=\DB::table('contacts')->get();
         $count = $contacts->count();
         $website = Website::all();
@@ -162,7 +163,7 @@ class AdvertisesController extends Controller
 
     public function standard(Advertise $advertise, Request $request)
     {
-        $contacts = Contact::where('website_id', $request->query('website_id', 1))->get();
+        $contacts = Contact::where('website_id', $request->query('website_id', 2))->get()->sortByDesc('id');
         // $contact=\DB::table('contacts')->get();
         $count = $contacts->count();
         $website = Website::all();
@@ -188,7 +189,6 @@ class AdvertisesController extends Controller
         $data = $this->getValidationContact();
         $contact = auth()->user()->contacts()->create($data);
         return redirect()->back();
-
 
     }
 
@@ -238,7 +238,7 @@ class AdvertisesController extends Controller
     protected function getValidationContact()
     {
         return \request()->validate([
-            'website_id' => 'required',
+            'website_id' => 'required|',
             'comment' => ['required', 'max:2000'],
         ]);
     }

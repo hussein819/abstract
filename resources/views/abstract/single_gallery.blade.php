@@ -1,8 +1,8 @@
 @extends('layouts.layout_abstract')
-@section('title','Single-Gallery')
+@section('title', 'Single-Gallery')
 @section('content')
     <!-- content
-   ================================================== -->
+       ================================================== -->
     <section id="content-wrap" class="blog-single">
         <div class="row">
             <div class="col-twelve">
@@ -14,8 +14,7 @@
                             <ul class="slides">
 
                                 <li>
-                                    <img src="{{ asset('storage/' . $advertise->photos) }}" alt=""
-                                         class="img-thumbnail">
+                                    <img src="{{ asset('storage/' . $advertise->photos) }}" alt="" class="img-thumbnail">
                                 </li>
 
                             </ul>
@@ -27,8 +26,9 @@
                         <h1 class="entry-title">Hey, This Is a Gallery Format Post.</h1>
 
                         <ul class="entry-meta">
-                            <li class="date">{{$advertise->created_at}}</li>
-                            <li class="cat"><a href="">Wordpress</a><a href="">{{--{{$advertise->website->name}}--}}</a>
+                            <li class="date">{{ $advertise->created_at }}</li>
+                            <li class="cat"><a href="">Wordpress</a><a
+                                    href="">{{--{{ $advertise->website->name }}--}}</a>
                             </li>
                         </ul>
 
@@ -56,9 +56,11 @@
                             Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut
                             et.</p>
 
-                        <blockquote><p>This is a simple example of a styled blockquote. A blockquote tag typically
+                        <blockquote>
+                            <p>This is a simple example of a styled blockquote. A blockquote tag typically
                                 specifies a section that is quoted from another source of some sort, or highlighting
-                                text in your post.</p></blockquote>
+                                text in your post.</p>
+                        </blockquote>
 
                         <p>Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
                             dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
@@ -78,16 +80,16 @@
                             voluptas assumenda est, omnis dolor repellendus.</p>
 
                         <pre><code>
-code {
-   font-size: 1.4rem;
-   margin: 0 .2rem;
-   padding: .2rem .6rem;
-   white-space: nowrap;
-   background: #F1F1F1;
-   border: 1px solid #E1E1E1;
-   border-radius: 3px;
-}
-</code></pre>
+    code {
+       font-size: 1.4rem;
+       margin: 0 .2rem;
+       padding: .2rem .6rem;
+       white-space: nowrap;
+       background: #F1F1F1;
+       border: 1px solid #E1E1E1;
+       border-radius: 3px;
+    }
+    </code></pre>
 
                         <p>Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
                             dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt
@@ -164,7 +166,7 @@ code {
             <div id="comments" class="row">
                 <div class="col-full">
 
-                    <h3>{{$count}} Comments</h3>
+                    <h3>{{ $count }} Comments</h3>
 
                     <!-- commentlist -->
                     <ol class="commentlist">
@@ -173,34 +175,34 @@ code {
 
                                 <div class="avatar">
                                     <img width="50" height="50" class="avatar"
-                                         src="{{asset('users/profile_image/'.$contact->user->avatar)}}" alt="">
+                                        src="{{ asset('users/profile_image/' . $contact->user->avatar) }}" alt="">
                                 </div>
 
                                 <div class="comment-content">
 
                                     <div class="comment-info">
-                                        <cite>{{$contact->user->name}}</cite>
+                                        <cite>{{ $contact->user->name }}</cite>
 
                                         <div class="comment-meta">
                                             <time class="comment-time"
-                                                  datetime="2014-07-12T23:05">{{$contact->user->created_at}}</time>
+                                                datetime="2014-07-12T23:05">{{ $contact->user->created_at }}</time>
                                             <span class="sep">/</span><a class="reply" href="#">Reply</a>
                                         </div>
                                     </div>
 
                                     <div class="comment-text">
-                                        <p>{{$contact->comment}}.</p>
+                                        <p>{{ $contact->comment }}.</p>
                                     </div>
                                     <div>
                                         <form action="{{ route('advertise.destroy', ['contact' => $contact]) }}"
-                                              method="post">
+                                            method="post">
                                             @method('DELETE')
                                             @csrf
                                             <button>
                                                 Delete
                                             </button>
                                             <a href="{{ route('advertise.edit', ['contact' => $contact]) }}" data-lity
-                                               style="padding: 10px;width: 100%">
+                                                style="padding: 10px;width: 100%">
                                                 <button>Edit</button>
                                             </a>
                                         </form>
@@ -219,23 +221,24 @@ code {
 
                         <h3>Leave a Comment</h3>
 
-                        <form name="contactForm" id="contactForm" method="post" action="{{route('advertise.store')}}">
+                        <form name="contactForm" id="contactForm" method="post" action="{{ route('advertise.store') }}">
                             <fieldset>
                                 <div class="form-field">
-                                    <select name="website_id" class="form-control" class="full-width"
-                                            placeholder="Website" value="" style="width:100%">
+                                    <select name="website_id" class="form-control" class="full-width" placeholder="Website"
+                                        value="" style="width:100%">
                                         @foreach ($website as $web)
-                                            <option
-                                                value="{{ $web->id }}" {{ $web->id == $contact->website_id ? 'selected' : '' }}>{{ $web->name }}</option>
+                                            <option value="{{ $web->id }}"
+                                                {{ $web->id == $contact->website_id ? 'selected' : '' }}>{{ $web->name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
 
                                 <div class="message form-field">
                                     <textarea name="comment" id="comment" class="full-width"
-                                              placeholder="Your Message"></textarea>
+                                        placeholder="Your Message"></textarea>
                                     @error('comment')
-                                    <small class="text-danger">{{ $message }}</small>
+                                        <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                                 @csrf
